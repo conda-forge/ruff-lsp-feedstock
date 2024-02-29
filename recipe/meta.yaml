@@ -1,5 +1,5 @@
 {% set name = "ruff-lsp" %}
-{% set version = "0.0.52" %}
+{% set version = "0.0.53" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ruff_lsp-{{ version }}.tar.gz
-  sha256: 3861c8fb81db005d51c0c15939fae05a6488182847bad936e1cc95bad519d107
+  sha256: de38eccd06020350630ac3518fe04a9640c8f66908758d8a623b5ea021bf84b0
 
 build:
   entry_points:
