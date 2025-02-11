@@ -14,15 +14,15 @@ build:
     - ruff-lsp = ruff_lsp.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - packaging >=23.1
     - pygls >=1.1.0
     - lsprotocol >=2023.0.0a1
@@ -37,6 +37,7 @@ test:
     - ruff-lsp --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/astral-sh/ruff-lsp
